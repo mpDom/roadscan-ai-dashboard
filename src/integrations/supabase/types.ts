@@ -14,7 +14,36 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      reports: {
+        Row: {
+          ai_classification: string | null
+          created_at: string
+          gps_lat: number
+          gps_lng: number
+          id: string
+          image_url: string | null
+          source_type: string
+        }
+        Insert: {
+          ai_classification?: string | null
+          created_at?: string
+          gps_lat: number
+          gps_lng: number
+          id?: string
+          image_url?: string | null
+          source_type: string
+        }
+        Update: {
+          ai_classification?: string | null
+          created_at?: string
+          gps_lat?: number
+          gps_lng?: number
+          id?: string
+          image_url?: string | null
+          source_type?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
